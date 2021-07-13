@@ -8,7 +8,15 @@ const ProductItem = (props) => {
   const dispatch = useDispatch();
 
   const addToCartHandler = () => {
-    dispatch(addToCartActions.addToCart({ id, title, price }));
+    // fetch('firebase-url', { method: 'POST', body: JSON.stringify(newCart) })
+
+    dispatch(
+      addToCartActions.addToCart({
+        id,
+        title,
+        price,
+      })
+    );
   };
 
   return (
